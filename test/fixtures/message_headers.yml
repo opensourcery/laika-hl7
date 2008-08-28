@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sending_application: MyString
+  sending_facility: MyString
+  receiving_application: MyString
+  receiving_facility: MyString
+  message_date: 2008-08-21
+  message_type: MyString
+  message_control_identifier: MyString
+
+two:
+  sending_application: MyString
+  sending_facility: MyString
+  receiving_application: MyString
+  receiving_facility: MyString
+  message_date: 2008-08-21
+  message_type: MyString
+  message_control_identifier: MyString
