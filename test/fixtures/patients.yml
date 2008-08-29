@@ -1,29 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  identifier: MyString
-  family_name: MyString
-  given_name: MyString
-  date_of_birth: 2008-08-20
-  administrative_sex: MyString
-  street_address: MyString
-  city: MyString
-  state: MyString
-  postal_code: MyString
-  country: MyString
-  home_phone: MyString
-  business_phone: MyString
+jennifer_thompson:
+  identifier: 00000111^^^^AN
+  family_name: Thompson
+  given_name: Jennifer
+  date_of_birth: 1977-04-10
+  administrative_sex: F
+  street_address: 2300 Commonwealth Avenue
+  city: Brighton
+  state: MA
+  postal_code: '02135'
 
-two:
-  identifier: MyString
-  family_name: MyString
-  given_name: MyString
-  date_of_birth: 2008-08-20
-  administrative_sex: MyString
-  street_address: MyString
-  city: MyString
-  state: MyString
-  postal_code: MyString
-  country: MyString
-  home_phone: MyString
-  business_phone: MyString

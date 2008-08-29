@@ -1,8 +1,14 @@
-require 'test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
 
 class PatientTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  context 'A Patient Instance' do
+    setup do 
+      @patient = Patient.find_by_identifier('00000111^^^^AN')
+    end
+    
+    should 'generate a hl7 v2.5.1 message' do
+      message = @patient.to_message
+      assert message
+    end
   end
 end

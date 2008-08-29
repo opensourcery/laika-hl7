@@ -1,19 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  sending_application: MyString
-  sending_facility: MyString
-  receiving_application: MyString
-  receiving_facility: MyString
+jennifer_thompson_header:
+  patient: jennifer_thompson
+  sending_application: '^CCHIT Lab Tool^L-CL'
+  sending_facility: '^CCHIT^L-CL'
+  receiving_application: Receiving App
+  receiving_facility: Receiving Facility
   message_date: 2008-08-21
-  message_type: MyString
-  message_control_identifier: MyString
-
-two:
-  sending_application: MyString
-  sending_facility: MyString
-  receiving_application: MyString
-  receiving_facility: MyString
-  message_date: 2008-08-21
-  message_type: MyString
-  message_control_identifier: MyString
+  message_type: ORU
+  message_control_identifier: '123212'
