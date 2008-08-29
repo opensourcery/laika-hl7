@@ -9,6 +9,7 @@ class ReceivedMessagesController < ApplicationController
     received_message = ReceivedMessage.new
     received_message.message_contents = params[:hl7message]
     received_message.save!
+    received_message.validate_hl7_message
     render :nothing => true
   end
   

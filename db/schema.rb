@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080821152136) do
+ActiveRecord::Schema.define(:version => 20080829005400) do
 
   create_table "message_headers", :force => true do |t|
     t.string  "sending_application"
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(:version => 20080821152136) do
 
   create_table "received_messages", :force => true do |t|
     t.text     "message_contents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "validation_errors", :force => true do |t|
+    t.string   "message"
+    t.string   "location"
+    t.integer  "received_message_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
