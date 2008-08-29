@@ -9,6 +9,7 @@ begin
       lib/streamlined/integration_tests.rb
       lib/relevance/integration_test_support.rb
       lib/relevance/controller_test_support.rb
+      Library/*
     }.join(',')
   
     desc "Delete aggregate coverage data."
