@@ -1,0 +1,7 @@
+*.log
+*.sqlite3
+config/database.yml
+coverage
+*.DS_Store
+tmp/*
+rcov_tmp
