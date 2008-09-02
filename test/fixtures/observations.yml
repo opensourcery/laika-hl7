@@ -1,21 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  value_type: MyString
-  identifier: MyString
-  identifier_text: MyString
-  identifier_code_system: MyString
-  observation_value: MyString
-  units: MyString
-  reference_range: MyString
-  abnormal_flags: MyString
-
-two:
-  value_type: MyString
-  identifier: MyString
-  identifier_text: MyString
-  identifier_code_system: MyString
-  observation_value: MyString
-  units: MyString
-  reference_range: MyString
-  abnormal_flags: MyString
+jennifer_thompson_obx:
+  patient: jennifer_thompson
+  value_type: CE
+  identifier: 785-6
+  identifier_text: MCH
+  identifier_code_system: LN
+  observation_value: '32.6'
+  units: pg
