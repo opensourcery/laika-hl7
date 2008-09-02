@@ -8,7 +8,8 @@ class PatientTest < ActiveSupport::TestCase
     
     should 'generate a hl7 v2.5.1 message' do
       message = @patient.to_message
-      assert message
+      assert(message)
+      assert_equal('Thompson^Jennifer', message[:PID].patient_name)
     end
   end
 end
