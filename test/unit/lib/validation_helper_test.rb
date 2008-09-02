@@ -8,12 +8,12 @@ class ValidationHelperTest < ActiveSupport::TestCase
     end
     
     should 'not return errors when values match' do
-      validate('foo', 'foo', 'PID-1', @error_list)
+      validate_field('foo', 'foo', 'PID-1', @error_list)
       assert(@error_list.empty?)
     end
     
     should 'return an error when values do not match' do
-      validate('foo', 'bar', 'PID-1', @error_list)
+      validate_field('foo', 'bar', 'PID-1', @error_list)
       an_error = @error_list.first
       assert(an_error)
       assert_equal('PID-1', an_error.location)
@@ -21,7 +21,7 @@ class ValidationHelperTest < ActiveSupport::TestCase
     end
     
     should 'return an error when a required value is blank' do
-      validate('foo', nil, 'PID-1', @error_list)
+      validate_field('foo', nil, 'PID-1', @error_list)
       an_error = @error_list.first
       assert(an_error)
       assert_equal('PID-1', an_error.location)
@@ -29,7 +29,7 @@ class ValidationHelperTest < ActiveSupport::TestCase
     end
     
     should 'not validate a field when the expected value is blank' do
-      validate('', 'foo', 'PID-1', @error_list)
+      validate_field('', 'foo', 'PID-1', @error_list)
       assert(@error_list.empty?)
     end
   end

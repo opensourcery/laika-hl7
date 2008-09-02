@@ -1,5 +1,5 @@
 module ValidationHelper
-  def validate(expected_value, actual_value, segment_field, error_list)
+  def validate_field(expected_value, actual_value, segment_field, error_list)
     unless expected_value.blank?
       if actual_value.blank?
         error_list << ValidationError.new(:location => segment_field, :message => "Expected #{expected_value}, but was blank")
