@@ -1,6 +1,8 @@
 class MessageHeader < ActiveRecord::Base
   belongs_to :patient
   
+  include ValidationHelper
+  
   def to_msh
     msh = HL7::Message::Segment::MSH.new
     msh.enc_chars = '^~\&'
@@ -15,5 +17,14 @@ class MessageHeader < ActiveRecord::Base
     msh.version_id = '2.5.1'
     
     msh
+  end
+  
+  def validate_msh_segment(msh_segment)
+    error_list = []
+    validate_field(self.sending_application, msh_segment.sending_app, 'MSH-3', error_list)
+    validate_field(self.sending_facility, msh_segment.sending_facility, 'MSH-4', error_list)
+    validate_field(self.receiving_application, msh_segment.recv_app, 'MSH-5', error_list)
+    validate_field(self.receiving_facility, msh_segment.recv_facility, 'MSH-6', error_list)
+    error_list
   end
 end
