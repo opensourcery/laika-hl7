@@ -1,5 +1,7 @@
 class Observation < ActiveRecord::Base
+  
   belongs_to :patient
+  belongs_to :loinc_lab_code
   
   include ValidationHelper
   

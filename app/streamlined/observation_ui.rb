@@ -5,9 +5,13 @@ Observation.class_eval { include ObservationAdditions }
 
 Streamlined.ui_for(Observation) do
   user_columns :value_type,
-               :identifier,
-               :identifier_text,
                :identifier_code_system,
+               :loinc_lab_code, {:show_view => [:name, 
+                                                {:fields => [:description], 
+                                                 :separator => " "
+                                                },
+                                               ],
+                                 :edit_view => [:select]},
                :observation_value,
                :units,
                :reference_range,

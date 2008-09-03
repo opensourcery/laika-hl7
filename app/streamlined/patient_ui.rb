@@ -3,6 +3,7 @@ module PatientAdditions
     "<a href=\"/patients/send_to_mirth/#{self.id}\">Send to Mirth</a>"
   end
 end
+
 Patient.class_eval { include PatientAdditions }
 
 class GenderType
@@ -23,11 +24,10 @@ class StateType
         ['Wyoming', 'WY']]
 end
 
-
 Streamlined.ui_for(Patient) do
   user_columns  :given_name, 
                 :family_name,
-                :administrative_sex, {:enumeration => GenderType::GENDERS},
+                :administrative_sex,  {:enumeration => GenderType::GENDERS},
                 :street_address,
                 :city,
                 :state, {:enumeration => StateType::US},
@@ -36,7 +36,7 @@ Streamlined.ui_for(Patient) do
                 :home_phone,
                 :business_phone,
                 :observations, {:show_view => [:list, 
-                                               {:fields => [:identifier_text, :observation_value, :units]}
+                                               {:fields => [:observation_value, :units]}
                                               ], 
                                 :edit_view => :window},
                 :message_header, {:show_view => [:name, 

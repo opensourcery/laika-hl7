@@ -1,10 +1,7 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
 jennifer_thompson_obx:
   patient: jennifer_thompson
   value_type: CE
-  identifier: 785-6
-  identifier_text: MCH
   identifier_code_system: LN
   observation_value: '32.6'
   units: pg
+  loinc_lab_code: mch
