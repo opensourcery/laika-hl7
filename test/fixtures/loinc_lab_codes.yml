@@ -110,7 +110,7 @@ urine_urobilinogen:
 
 urine_leukocytes: 
   name : URINE LEUKOCYTES
-  description: URINE LEUKOCYTES
+  description: Urine Leukocytes
   code: 5821-4
 
 albumin:

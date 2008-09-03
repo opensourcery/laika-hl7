@@ -8,6 +8,8 @@ joe_smith:
   city: Rockville
   state: MD
   postal_code: '20847'
+  country: United States of America
+  home_phone: '+1-312-555-1234'
 
 emily_jones:
   identifier: 00322313^^^^AN
@@ -19,6 +21,8 @@ emily_jones:
   city: Rockville
   state: MD
   postal_code: '20847'
+  country: United States of America
+  home_phone: '+1-301-555-0199'
 
 will_haynes:
   identifier: 00222111^^^^AN
@@ -30,6 +34,8 @@ will_haynes:
   city: Alexandria
   state: VA
   postal_code: '22301'
+  country: United States of America
+  home_phone: '+1-703-555-0111'
 
 jennifer_thompson:
   identifier: 00000111^^^^AN
@@ -41,6 +47,9 @@ jennifer_thompson:
   city: Brighton
   state: MA
   postal_code: '02135'
+  country: United States of America
+  home_phone: '+1-617-555-1212'
+  business_phone: '+1-555-867-5309'
 
 theodore_smith:
   identifier: 00055511^^^^AN
@@ -52,6 +61,8 @@ theodore_smith:
   city: Brighton
   state: MA
   postal_code: '02135'
+  country: United States of America
+  home_phone: '+1-240-555-1212'
 
 david_carter:
   identifier: 00016111^^^^AN
@@ -63,3 +74,5 @@ david_carter:
   city: Silver Spring
   state: MD
   postal_code: '20902'
+  country: United States of America
+  home_phone: '+1-301-555-0144'
