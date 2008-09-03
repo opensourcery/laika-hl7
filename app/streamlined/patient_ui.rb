@@ -38,6 +38,6 @@ Streamlined.ui_for(Patient) do
                 :observations, {:show_view => [:list, {:fields => [:observation_value, :units]} ], 
                                 :edit_view => [:window, {:fields => [:observation_value, :units]} ] },
                 :message_header, {:show_view => [:name, {:fields => [:sending_application, :sending_facility], :separator => " " }, ],
-                                  :edit_view => [:select]},
+                                  :edit_view => [:select, { :fields => [:sending_application, :sending_facility], :separator => " " }, ]},
                 :mirth, {:allow_html => true}
 end
