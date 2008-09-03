@@ -1,9 +1,5 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  message: MyString
-  location: MyString
-
-two:
-  message: MyString
-  location: MyString
+message_two_error:
+  received_message: message_two
+  message: Unable to parse message
