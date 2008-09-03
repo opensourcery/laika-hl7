@@ -12,5 +12,5 @@ Streamlined.ui_for(MessageHeader) do
                :message_type,
                :message_control_identifier,
                :patient, {:show_view => [:name, { :fields => [:given_name, :family_name], :separator => " " }],
-                          :edit_view => [:select]}
+                          :edit_view => [:select, { :fields => [:given_name, :family_name], :separator => " " }, ]}
 end

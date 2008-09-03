@@ -1,11 +1,59 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+joe_smith_header:
+  patient: joe_smith
+  sending_application: '^Laika_HL7_251^L-CL'
+  sending_facility: '^CCHIT^L-CL'
+  receiving_application: Receiving App
+  receiving_facility: Receiving Facility
+  message_date: 2008-08-14
+  message_type: ORU
+  message_control_identifier: '345623'
+  
+emily_jones_header:
+  patient: emily_jones
+  sending_application: '^Laika_HL7_251^L-CL'
+  sending_facility: '^CCHIT^L-CL'
+  receiving_application: Receiving App
+  receiving_facility: Receiving Facility
+  message_date: 2008-07-21
+  message_type: ORU
+  message_control_identifier: '677419'
+
+will_haynes_header:
+  patient: will_haynes
+  sending_application: '^Laika_HL7_251^L-CL'
+  sending_facility: '^CCHIT^L-CL'
+  receiving_application: Receiving App
+  receiving_facility: Receiving Facility
+  message_date: 2008-08-21
+  message_type: ORU
+  message_control_identifier: '501058'
 
 jennifer_thompson_header:
   patient: jennifer_thompson
-  sending_application: '^CCHIT Lab Tool^L-CL'
+  sending_application: '^Laika_HL7_251^L-CL'
   sending_facility: '^CCHIT^L-CL'
   receiving_application: Receiving App
   receiving_facility: Receiving Facility
   message_date: 2008-08-21
   message_type: ORU
   message_control_identifier: '123212'
+
+theodore_smith_header:
+  patient: theodore_smith
+  sending_application: '^Laika_HL7_251^L-CL'
+  sending_facility: '^CCHIT^L-CL'
+  receiving_application: Receiving App
+  receiving_facility: Receiving Facility
+  message_date: 2007-12-25
+  message_type: ORU
+  message_control_identifier: '334199'
+
+david_carter_header:
+  patient: david_carter
+  sending_application: '^Laika_HL7_251^L-CL'
+  sending_facility: '^CCHIT^L-CL'
+  receiving_application: Receiving App
+  receiving_facility: Receiving Facility
+  message_date: 2006-04-12
+  message_type: ORU
+  message_control_identifier: '357601'
