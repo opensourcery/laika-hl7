@@ -9,7 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080903123622) do
+ActiveRecord::Schema.define(:version => 20080903131614) do
+
+  create_table "code_systems", :force => true do |t|
+    t.string "name"
+    t.string "code"
+  end
 
   create_table "loinc_lab_codes", :force => true do |t|
     t.string   "name"
@@ -39,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20080903123622) do
     t.string  "abnormal_flags"
     t.integer "patient_id",             :limit => 11
     t.integer "loinc_lab_code_id",      :limit => 11
+    t.integer "code_system_id",         :limit => 11
   end
 
   create_table "patients", :force => true do |t|

@@ -1,4 +1,35 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+joe_smith:
+  identifier: 00424111^^^^AN
+  family_name: Smith
+  given_name: Joe
+  date_of_birth: 1977-04-10
+  administrative_sex: M
+  street_address: 1600 Rockville Pike
+  city: Rockville
+  state: MD
+  postal_code: '20847'
+
+emily_jones:
+  identifier: 00322313^^^^AN
+  family_name: Jones
+  given_name: Emily
+  date_of_birth: 1977-04-10
+  administrative_sex: F
+  street_address: 2501 Merrvale Road
+  city: Rockville
+  state: MD
+  postal_code: '20847'
+
+will_haynes:
+  identifier: 00222111^^^^AN
+  family_name: Haynes
+  given_name: Will
+  date_of_birth: 1977-04-10
+  administrative_sex: M
+  street_address: 16167 King Street
+  city: Alexandria
+  state: VA
+  postal_code: '22301'
 
 jennifer_thompson:
   identifier: 00000111^^^^AN
@@ -11,3 +42,24 @@ jennifer_thompson:
   state: MA
   postal_code: '02135'
 
+theodore_smith:
+  identifier: 00055511^^^^AN
+  family_name: Smith
+  given_name: Ted
+  date_of_birth: 1977-04-10
+  administrative_sex: M
+  street_address: 2300 Commonwealth Avenue
+  city: Brighton
+  state: MA
+  postal_code: '02135'
+
+david_carter:
+  identifier: 00016111^^^^AN
+  family_name: Carter
+  given_name: David
+  date_of_birth: 1977-04-10
+  administrative_sex: M
+  street_address: 1234 Willow Way
+  city: Silver Spring
+  state: MD
+  postal_code: '20902'

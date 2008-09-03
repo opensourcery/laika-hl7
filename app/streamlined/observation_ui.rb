@@ -5,7 +5,12 @@ Observation.class_eval { include ObservationAdditions }
 
 Streamlined.ui_for(Observation) do
   user_columns :value_type,
-               :identifier_code_system,
+               :code_system, {:show_view => [:name, 
+                                    {:fields => [:name], 
+                                     :separator => " "
+                                    },
+                                   ],
+                     :edit_view => [:select]},
                :loinc_lab_code, {:show_view => [:name, 
                                                 {:fields => [:description], 
                                                  :separator => " "
@@ -16,8 +21,7 @@ Streamlined.ui_for(Observation) do
                :units,
                :reference_range,
                :abnormal_flags,
-               :patient, {:show_view => [:name, { :fields => [:given_name, :family_name], :separator => " " },
-                                        ],
-                          :edit_view => [:select]}
+               :patient, {:show_view => [:name, { :fields => [:given_name, :family_name], :separator => " " }, ],
+                          :edit_view => [:select, { :fields => [:given_name, :family_name], :separator => " " }, ]}
                
 end

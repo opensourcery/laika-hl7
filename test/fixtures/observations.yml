@@ -1,7 +1,47 @@
+joe_smith_obx:
+  patient: joe_smith
+  value_type: CE
+  code_system: loinc
+  loinc_lab_code: mch
+  observation_value: '32.6'
+  units: pg
+
+emily_jones_obx:
+  patient: emily_jones
+  value_type: CE
+  code_system: loinc
+  loinc_lab_code: mch
+  observation_value: '32.6'
+  units: pg
+  
+will_haynes_obx:
+  patient: will_haynes
+  value_type: CE
+  code_system: loinc
+  loinc_lab_code: mch
+  observation_value: '32.6'
+  units: pg
+
 jennifer_thompson_obx:
   patient: jennifer_thompson
   value_type: CE
-  identifier_code_system: LN
+  code_system: loinc
+  loinc_lab_code: mch
   observation_value: '32.6'
   units: pg
+
+theodore_smith_obx:
+  patient: theodore_smith
+  value_type: CE
+  code_system: loinc
   loinc_lab_code: mch
+  observation_value: '32.6'
+  units: pg
+
+david_carter_obx:
+  patient: david_carter
+  value_type: CE
+  code_system: loinc
+  loinc_lab_code: mch
+  observation_value: '32.6'
+  units: pg

@@ -1,7 +1,8 @@
 class Observation < ActiveRecord::Base
   
-  belongs_to :patient
+  belongs_to :code_system
   belongs_to :loinc_lab_code
+  belongs_to :patient
   
   include ValidationHelper
   
@@ -17,7 +18,7 @@ class Observation < ActiveRecord::Base
   end
   
   def observation_id_field
-    "#{self.identifier}^#{self.identifier_text}^#{self.identifier_code_system}"
+    "#{self.loinc_lab_code.code}^#{self.loinc_lab_code.name}^#{self.code_system.code}"
   end
   
   def validate_obx_segment(obx_segment)
