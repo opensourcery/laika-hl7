@@ -2,6 +2,18 @@ module PatientAdditions
   def mirth
     "<a href=\"/patients/send_to_mirth/#{self.id}\">Send to Mirth</a>"
   end
+  
+  def observation_code_name 
+    self.observations.map {|obs| obs.loinc_lab_code.name}.join('\n')
+  end
+  
+  def header_display_name 
+    if self.message_header
+      return self.message_header.sending_application + " " + self.message_header.sending_facility
+    end
+    return ""
+  end
+  
 end
 
 Patient.class_eval { include PatientAdditions }
@@ -24,6 +36,7 @@ class StateType
         ['Wyoming', 'WY']]
 end
 
+
 Streamlined.ui_for(Patient) do
   user_columns  :given_name, 
                 :family_name,
@@ -35,9 +48,7 @@ Streamlined.ui_for(Patient) do
                 :country,
                 :home_phone,
                 :business_phone,
-                :observations, {:show_view => [:list, {:fields => [:observation_value, :units]} ], 
-                                :edit_view => [:window, {:fields => [:observation_value, :units]} ] },
-                :message_header, {:show_view => [:name, {:fields => [:sending_application, :sending_facility], :separator => " " }, ],
-                                  :edit_view => [:select, { :fields => [:sending_application, :sending_facility], :separator => " " }, ]},
+                :observation_code_name,
+                :header_display_name,
                 :mirth, {:allow_html => true}
 end
