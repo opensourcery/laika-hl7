@@ -25,7 +25,28 @@ class Observation < ActiveRecord::Base
     validate_field(self.observation_id_field, obx_segment.observation_id, 'OBX-3', error_list)
     validate_field(self.observation_value, obx_segment.observation_value, 'OBX-5', error_list)
     validate_field(self.units, obx_segment.units, 'OBX-6', error_list)
-    validate_field(self.reference_range, obx_segment.references_range, 'OBX-7', error_list)    
+    validate_field(self.reference_range, obx_segment.references_range, 'OBX-7', error_list)
+    
     error_list
+  end
+  
+  def get_matching_obx_segment(obx)
+    case(obx)
+    when(Array)
+      obx.each do |individual_obx|
+        if individual_obx.observation_id.eql?(self.observation_id_field)
+          return individual_obx
+        end
+      end
+    when(HL7::Message::Segment::OBX)
+      if obx.observation_id.eql?(self.observation_id_field)
+        return obx
+      end
+    else
+      raise ArgumentError
+    end
+    
+    # No match found
+    return nil
   end
 end

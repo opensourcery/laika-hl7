@@ -41,7 +41,14 @@ class Patient < ActiveRecord::Base
     error_list.concat(message_header.validate_msh_segment(msg[:MSH]))
     error_list.concat(validate_pid_segment(msg[:PID]))
 
-    # Need to match the obx to the observation to validate
+    self.observations.each do |observation|
+      matching_obx = observation.get_matching_obx_segment(msg[:OBX])
+      if matching_obx
+        error_list.concat(observation.validate_obx_segment(matching_obx))
+      else
+        error_list << ValidationError.new(:message => "Unable to find a matching observation for #{observation.identifier_text}")
+      end
+    end
 
     error_list
   end
