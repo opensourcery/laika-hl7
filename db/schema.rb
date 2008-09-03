@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20080829005400) do
     t.date    "message_date"
     t.string  "message_type"
     t.string  "message_control_identifier"
-    t.integer "patient_id"
+    t.integer "patient_id",                 :limit => 11
   end
 
   create_table "observations", :force => true do |t|
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20080829005400) do
     t.string  "units"
     t.string  "reference_range"
     t.string  "abnormal_flags"
-    t.integer "patient_id"
+    t.integer "patient_id",             :limit => 11
   end
 
   create_table "patients", :force => true do |t|
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20080829005400) do
   create_table "validation_errors", :force => true do |t|
     t.string   "message"
     t.string   "location"
-    t.integer  "received_message_id"
+    t.integer  "received_message_id", :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
