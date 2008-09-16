@@ -4,7 +4,7 @@ module PatientAdditions
   end
   
   def observation_code_name 
-    self.observations.map {|obs| obs.loinc_lab_code.name}.join('\n')
+    self.observations.map {|obs| obs.loinc_lab_code.name}.join("\n")
   end
   
   def header_display_name 
