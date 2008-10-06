@@ -31,8 +31,8 @@ class StateType
         ['Mississippi', 'MS'],    ['Montana', 'MT'],      ['North Carolina', 'NC'],       ['North Dakota', 'ND'],         ['Nebraska', 'NE'],
         ['New Hampshire', 'NH'],  ['New Jersey', 'NJ'],   ['New Mexico', 'NM'],           ['Nevada', 'NV'],               ['New York', 'NY'],
         ['Ohio', 'OH'],           ['Oklahoma', 'OK'],     ['Oregon', 'OR'],               ['Pennsylvania', 'PA'],         ['Rhode Island', 'RI'],
-        ['South Carolina', 'SC'], ['South Dakota', 'SD'], ['Tennesse', 'TN'],             ['Texas', 'TX'],                ['Utah', 'UT'],
-        ['Virginia', 'VA'],       ['Vermont', 'VT'],      ['Washington', 'WA'],           ['Wisconson', 'WI'],            ['West Virginia ', 'WV'],
+        ['South Carolina', 'SC'], ['South Dakota', 'SD'], ['Tennessee', 'TN'],            ['Texas', 'TX'],                ['Utah', 'UT'],
+        ['Virginia', 'VA'],       ['Vermont', 'VT'],      ['Washington', 'WA'],           ['Wisconsin', 'WI'],            ['West Virginia ', 'WV'],
         ['Wyoming', 'WY']]
 end
 
