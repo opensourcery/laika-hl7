@@ -10,8 +10,8 @@ class MessageHeaderTest < ActiveSupport::TestCase
     should 'generate a hl7 v2.5.1 MSH segment' do
       msh_segment = @message_header.to_msh
       assert(msh_segment)
-      assert_equal('^Laika_HL7_251^L-CL', msh_segment.sending_app)
-      assert_equal('^CCHIT^L-CL', msh_segment.sending_facility)
+      assert_equal('^Laika_HL7_251^HCD', msh_segment.sending_app)
+      assert_equal('^CCHIT^HCD', msh_segment.sending_facility)
       assert_equal('Receiving App', msh_segment.recv_app)
       assert_equal('Receiving Facility', msh_segment.recv_facility)
     end
