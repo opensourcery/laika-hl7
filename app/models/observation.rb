@@ -9,6 +9,7 @@ class Observation < ActiveRecord::Base
     obx.observation_value = self.observation_value
     obx.units = self.units
     obx.references_range = self.reference_range
+    obx.observation_result_status = self.result_status
     
     obx
   end
@@ -21,6 +22,7 @@ class Observation < ActiveRecord::Base
     validate_field(self.observation_value, obx_segment.observation_value, 'OBX-5', error_list)
     validate_field(self.units, obx_segment.units, 'OBX-6', error_list)
     validate_field(self.reference_range, obx_segment.references_range, 'OBX-7', error_list)
+    validate_field(self.result_status, obx_segment.observation_result_status, 'OBX-11', error_list)
     
     error_list
   end

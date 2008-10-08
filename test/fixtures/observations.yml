@@ -4,6 +4,7 @@ joe_smith_obx:
   loinc_lab_code: psa
   observation_value: '2.0'
   units: ng/mL
+  result_status: F
 
 emily_jones_obx:
   patient: emily_jones
@@ -11,6 +12,7 @@ emily_jones_obx:
   loinc_lab_code: urine_ph
   observation_value: '7.1'
   units: pg
+  result_status: F
   
 will_haynes_obx:
   patient: will_haynes
@@ -18,6 +20,7 @@ will_haynes_obx:
   loinc_lab_code: hematocrit
   observation_value: '44%'
   units: pg
+  result_status: F
 
 jennifer_thompson_obx:
   patient: jennifer_thompson
@@ -25,6 +28,7 @@ jennifer_thompson_obx:
   loinc_lab_code: mch
   observation_value: '32.6'
   units: pg
+  result_status: F
 
 theodore_smith_obx:
   patient: theodore_smith
@@ -32,6 +36,7 @@ theodore_smith_obx:
   loinc_lab_code: bilirubin
   observation_value: '0.8'
   units: mg/dL
+  result_status: F
 
 david_carter_obx:
   patient: david_carter
@@ -39,3 +44,4 @@ david_carter_obx:
   loinc_lab_code: glucose
   observation_value: '91'
   units:  mg/dL
+  result_status: F
