@@ -1,6 +1,7 @@
 class Patient < ActiveRecord::Base
 
   has_many :observations
+  has_many :observation_requests
   has_one :message_header
 
   include ValidationHelper
@@ -20,6 +21,10 @@ class Patient < ActiveRecord::Base
     pid.phone_business = self.business_phone
 
     msg << pid
+    
+    observation_requests.each do |obr|
+      msg << obr.to_obr
+    end
 
     observations.each do |observation|
       msg << observation.to_obx

@@ -1,0 +1,29 @@
+joe_smith_obr:
+  patient: joe_smith
+  loinc_lab_code: psa
+  ordering_provider: '24601^SIMPSON^NICK^^^DR.'
+
+emily_jones_obr:
+  patient: emily_jones
+  loinc_lab_code: urine_ph
+  ordering_provider: '24601^SIMPSON^NICK^^^DR.'
+  
+will_haynes_obr:
+  patient: will_haynes
+  loinc_lab_code: hematocrit
+  ordering_provider: '24601^SIMPSON^NICK^^^DR.'
+
+jennifer_thompson_obr:
+  patient: jennifer_thompson
+  loinc_lab_code: mch
+  ordering_provider: '24601^SIMPSON^NICK^^^DR.'
+
+theodore_smith_obr:
+  patient: theodore_smith
+  loinc_lab_code: bilirubin
+  ordering_provider: '24601^SIMPSON^NICK^^^DR.'
+
+david_carter_obr:
+  patient: david_carter
+  loinc_lab_code: glucose
+  ordering_provider: '24601^SIMPSON^NICK^^^DR.'

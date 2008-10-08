@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081007135153) do
+ActiveRecord::Schema.define(:version => 20081007145118) do
 
   create_table "loinc_lab_codes", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,12 @@ ActiveRecord::Schema.define(:version => 20081007135153) do
     t.integer "patient_id"
   end
 
+  create_table "observation_requests", :force => true do |t|
+    t.string  "ordering_provider"
+    t.integer "patient_id"
+    t.integer "loinc_lab_code_id"
+  end
+
   create_table "observations", :force => true do |t|
     t.string  "value_type"
     t.string  "observation_value"
@@ -38,7 +44,6 @@ ActiveRecord::Schema.define(:version => 20081007135153) do
     t.string  "abnormal_flags"
     t.integer "patient_id"
     t.integer "loinc_lab_code_id"
-    t.integer "code_system_id"
   end
 
   create_table "patients", :force => true do |t|

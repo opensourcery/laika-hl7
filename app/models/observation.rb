@@ -1,9 +1,6 @@
 class Observation < ActiveRecord::Base
   
-  belongs_to :loinc_lab_code
-  belongs_to :patient
-  
-  include ValidationHelper
+  include ObservationRelated
   
   def to_obx
     obx = HL7::Message::Segment::OBX.new 
@@ -14,10 +11,6 @@ class Observation < ActiveRecord::Base
     obx.references_range = self.reference_range
     
     obx
-  end
-  
-  def observation_id_field
-    "#{self.loinc_lab_code.code}^#{self.loinc_lab_code.name}^LN" # Last part hard coded to LOINC
   end
   
   def validate_obx_segment(obx_segment)
@@ -33,22 +26,6 @@ class Observation < ActiveRecord::Base
   end
   
   def get_matching_obx_segment(obx)
-    case(obx)
-    when(Array)
-      obx.each do |individual_obx|
-        if individual_obx.observation_id.eql?(self.observation_id_field)
-          return individual_obx
-        end
-      end
-    when(HL7::Message::Segment::OBX)
-      if obx.observation_id.eql?(self.observation_id_field)
-        return obx
-      end
-    else
-      raise ArgumentError
-    end
-    
-    # No match found
-    return nil
+    get_matching_segment(obx, :observation_id, HL7::Message::Segment::OBX)
   end
 end
