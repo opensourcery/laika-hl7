@@ -9,12 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080903131614) do
-
-  create_table "code_systems", :force => true do |t|
-    t.string "name"
-    t.string "code"
-  end
+ActiveRecord::Schema.define(:version => 20081007135153) do
 
   create_table "loinc_lab_codes", :force => true do |t|
     t.string   "name"
@@ -37,7 +32,6 @@ ActiveRecord::Schema.define(:version => 20080903131614) do
 
   create_table "observations", :force => true do |t|
     t.string  "value_type"
-    t.string  "identifier_code_system"
     t.string  "observation_value"
     t.string  "units"
     t.string  "reference_range"

@@ -5,12 +5,6 @@ Observation.class_eval { include ObservationAdditions }
 
 Streamlined.ui_for(Observation) do
   user_columns :value_type,
-               :code_system, {:show_view => [:name, 
-                                    {:fields => [:name], 
-                                     :separator => " "
-                                    },
-                                   ],
-                     :edit_view => [:select]},
                :loinc_lab_code, {:show_view => [:name, 
                                                 {:fields => [:description], 
                                                  :separator => " "

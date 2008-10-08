@@ -1,6 +1,5 @@
 class Observation < ActiveRecord::Base
   
-  belongs_to :code_system
   belongs_to :loinc_lab_code
   belongs_to :patient
   
@@ -18,7 +17,7 @@ class Observation < ActiveRecord::Base
   end
   
   def observation_id_field
-    "#{self.loinc_lab_code.code}^#{self.loinc_lab_code.name}^#{self.code_system.code}"
+    "#{self.loinc_lab_code.code}^#{self.loinc_lab_code.name}^LN" # Last part hard coded to LOINC
   end
   
   def validate_obx_segment(obx_segment)
