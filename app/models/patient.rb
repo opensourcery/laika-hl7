@@ -54,6 +54,15 @@ class Patient < ActiveRecord::Base
         error_list << ValidationError.new(:message => "Unable to find a matching observation for #{observation.identifier_text}")
       end
     end
+    
+    self.observation_requests.each do |obr|
+      matching_obr = obr.get_matching_obr_segment(msg[:OBR])
+      if matching_obr
+        error_list.concat(obr.validate_obr_segment(matching_obr))
+      else
+        error_list << ValidationError.new(:message => "Unable to find a matching observation request for #{obr.identifier_text}")
+      end
+    end
 
     error_list
   end
