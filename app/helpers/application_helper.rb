@@ -4,6 +4,7 @@ module ApplicationHelper
     [ 
       ["Patients", {:controller => "patients"}],
       ["Observations", {:controller => "observations"}],
+      ["Observation Requests", {:controller => "observation_requests"}],
       ["Message Headers", {:controller => "message_headers"}],
       ["Received Messages", {:controller => "received_messages"}]
     ]
