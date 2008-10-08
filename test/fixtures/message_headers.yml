@@ -7,6 +7,7 @@ joe_smith_header:
   message_date: 2008-08-14
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '345623'
+  processing_id_field: D
   
 emily_jones_header:
   patient: emily_jones
@@ -17,6 +18,7 @@ emily_jones_header:
   message_date: 2008-07-21
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '677419'
+  processing_id_field: D
 
 will_haynes_header:
   patient: will_haynes
@@ -27,6 +29,7 @@ will_haynes_header:
   message_date: 2008-08-21
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '501058'
+  processing_id_field: D
 
 jennifer_thompson_header:
   patient: jennifer_thompson
@@ -37,6 +40,7 @@ jennifer_thompson_header:
   message_date: 2008-08-21
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '123212'
+  processing_id_field: D
 
 theodore_smith_header:
   patient: theodore_smith
@@ -47,6 +51,7 @@ theodore_smith_header:
   message_date: 2007-12-25
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '334199'
+  processing_id_field: D
 
 david_carter_header:
   patient: david_carter
@@ -57,3 +62,4 @@ david_carter_header:
   message_date: 2006-04-12
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '357601'
+  processing_id_field: D

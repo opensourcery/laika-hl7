@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081007145118) do
+ActiveRecord::Schema.define(:version => 20081008141715) do
 
   create_table "loinc_lab_codes", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20081007145118) do
     t.string  "message_type"
     t.string  "message_control_identifier"
     t.integer "patient_id"
+    t.string  "processing_id_field"
   end
 
   create_table "observation_requests", :force => true do |t|
