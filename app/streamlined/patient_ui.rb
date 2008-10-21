@@ -38,7 +38,8 @@ end
 
 
 Streamlined.ui_for(Patient) do
-  user_columns  :given_name, 
+  user_columns  :identifier,
+                :given_name, 
                 :family_name,
                 :administrative_sex,  {:enumeration => GenderType::GENDERS},
                 :street_address,
