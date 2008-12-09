@@ -7,6 +7,7 @@ class ReceivedMessageTest < ActiveSupport::TestCase
       @bad_rm = received_messages(:message_two)
       @blank_name = received_messages(:blank_name)
       @double_pid = received_messages(:double_pid)
+      @no_pid = received_messages(:no_pid)
     end
     
     should 'display the patient name' do
@@ -29,6 +30,20 @@ class ReceivedMessageTest < ActiveSupport::TestCase
       @good_rm.validate_hl7_message
       assert(@good_rm.validation_errors.empty?)
       assert(@good_rm.valid_hl7_message?)
+    end
+    
+    should 'fail a message with two pid segments' do
+      @double_pid.validate_hl7_message
+      assert(! @double_pid.validation_errors.empty?)
+      assert(! @double_pid.valid_hl7_message?)
+      assert_equal('Got more than one PID segment', @double_pid.validation_errors.first.message)
+    end
+    
+    should 'fail a message with no pid segment' do
+      @no_pid.validate_hl7_message
+      assert(! @no_pid.validation_errors.empty?)
+      assert(! @no_pid.valid_hl7_message?)
+      assert_equal('No PID segment provided', @no_pid.validation_errors.first.message)
     end
     
     should 'flag a message with bad contents' do
