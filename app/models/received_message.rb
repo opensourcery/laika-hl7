@@ -5,11 +5,18 @@ class ReceivedMessage < ActiveRecord::Base
     begin
       msg = HL7::Message.new(self.message_contents)
       if msg[:PID]
-        if msg[:PID].patient_name.blank?
-          'No patient name provided'
-        else
-          msg[:PID].patient_name
-        end
+          display_name = case(msg[:PID])
+                           when(Array)
+                             msg[:PID].first.patient_name
+                           when(HL7::Message::Segment::PID)
+                             msg[:PID].patient_name
+                         end
+                         
+          if display_name.blank?
+            'No patient name provided'
+          else
+            display_name
+          end
       else
         'Could not find PID Segment in message'
       end

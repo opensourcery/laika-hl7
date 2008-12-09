@@ -5,3 +5,10 @@ message_one:
 
 message_two:
   message_contents: "\r\rNot a valid hl7 message\n"
+
+blank_name:
+  message_contents: "MSH|^~\\&|^Laika_HL7_251^HCD|^CCHIT^HCD|Receiving App|Receiving Facility|20080821||ORU|123212|D|2.5.1\rPID|||00000111^^^^AN||||19770410|F|||2300 Commonwealth Avenue^^Brighton^MA^02135|||\rOBR||||785-6^MCH^LN||||||||||||24601^SIMPSON^NICK^^^DR.\rOBX||CE|785-6^MCH^LN||32.6|pg|||||F"
+
+double_pid:
+  message_contents: "MSH|^~\\&|^Laika_HL7_251^HCD|^CCHIT^HCD|Receiving App|Receiving Facility|20080821||ORU|123212|D|2.5.1\rPID|||00000111^^^^AN||Thompson^Jenny||19770410|F|||2300 Commonwealth Avenue^^Brighton^MA^02135|||\rPID|||00000111^^^^AN||Thompson^Jennifer||19770410|F|||2300 Commonwealth Avenue^^Brighton^MA^02135|||\rOBR||||785-6^MCH^LN||||||||||||24601^SIMPSON^NICK^^^DR.\rOBX||CE|785-6^MCH^LN||32.6|pg|||||F"
+
