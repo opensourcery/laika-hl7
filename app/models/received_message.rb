@@ -4,10 +4,14 @@ class ReceivedMessage < ActiveRecord::Base
   def name
     begin
       msg = HL7::Message.new(self.message_contents)
-      if msg[:PID].patient_name.blank?
-        'No patient name provided'
+      if msg[:PID]
+        if msg[:PID].patient_name.blank?
+          'No patient name provided'
+        else
+          msg[:PID].patient_name
+        end
       else
-        msg[:PID].patient_name
+        'Could not find PID Segment in message'
       end
     rescue HL7::Exception
       'Unable to parse message'
