@@ -10,8 +10,8 @@ class ObservationRequestTest < ActiveSupport::TestCase
     should 'generate a hl7 v2.5.1 OBR segment' do
       obr_segment = @observation_request.to_obr
       assert(obr_segment)
-      assert_equal('785-6^MCH^LN', obr_segment.universal_service_id)
-      assert_equal('24601^SIMPSON^NICK^^^DR.', obr_segment.ordering_provider)
+      assert_equal('2341-6^GLUCOSE^LN', obr_segment.universal_service_id)
+      assert_equal('24601^Real^Not^^1^DR.', obr_segment.ordering_provider)
     end
     
     should 'validate a hl7 v2.5.1 OBR segment' do

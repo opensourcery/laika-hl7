@@ -47,8 +47,10 @@ jennifer_thompson:
   city: Brighton
   state: MA
   postal_code: '02135'
+  country: United States of America
+  home_phone: '+1-312-555-7890'
 
-theodore_smith:
+ted_smith:
   identifier: 00055511^^^^AN
   family_name: Smith
   given_name: Ted

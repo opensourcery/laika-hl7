@@ -51,7 +51,7 @@ class Patient < ActiveRecord::Base
       if matching_obx
         error_list.concat(observation.validate_obx_segment(matching_obx))
       else
-        error_list << ValidationError.new(:message => "Unable to find a matching observation for #{observation.identifier_text}")
+        error_list << ValidationError.new(:message => "Unable to find a matching observation for #{observation.observation_id_field}")
       end
     end
     
@@ -60,7 +60,7 @@ class Patient < ActiveRecord::Base
       if matching_obr
         error_list.concat(obr.validate_obr_segment(matching_obr))
       else
-        error_list << ValidationError.new(:message => "Unable to find a matching observation request for #{obr.identifier_text}")
+        error_list << ValidationError.new(:message => "Unable to find a matching observation request for #{obr.observation_id_field}")
       end
     end
 

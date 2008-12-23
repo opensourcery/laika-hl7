@@ -1,9 +1,9 @@
 joe_smith_header:
   patient: joe_smith
-  sending_application: '^Laika_HL7_251^HCD'
-  sending_facility: '^CCHIT^HCD'
-  receiving_application: Receiving App
-  receiving_facility: Receiving Facility
+  sending_application: 'Laika^Test^L'
+  sending_facility: 'CCHIT_Test_Lab_Alpha^Test^L'
+  receiving_application: 'Laika^Test^L'
+  receiving_facility: 'Not A Real Clinic Alpha^L'
   message_date: 2008-08-14
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '345623'
@@ -11,10 +11,10 @@ joe_smith_header:
   
 emily_jones_header:
   patient: emily_jones
-  sending_application: '^Laika_HL7_251^HCD'
-  sending_facility: '^CCHIT^HCD'
-  receiving_application: Receiving App
-  receiving_facility: Receiving Facility
+  sending_application: 'Laika^Test^L'
+  sending_facility: 'CCHIT_Test_Lab_Beta^Test^L'
+  receiving_application: 'Laika^Test^L'
+  receiving_facility: 'Not A Real Clinic Beta^L'
   message_date: 2008-07-21
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '677419'
@@ -33,21 +33,21 @@ will_haynes_header:
 
 jennifer_thompson_header:
   patient: jennifer_thompson
-  sending_application: '^Laika_HL7_251^HCD'
-  sending_facility: '^CCHIT^HCD'
-  receiving_application: Receiving App
-  receiving_facility: Receiving Facility
+  sending_application: 'Laika^Test^L'
+  sending_facility: 'CCHIT_Test_Lab_Beta^Test^L'
+  receiving_application: 'Laika^Test^L'
+  receiving_facility: 'Not A Real Clinic Beta^L'
   message_date: 2008-08-21
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '123212'
   processing_id_field: D
 
-theodore_smith_header:
-  patient: theodore_smith
-  sending_application: '^Laika_HL7_251^HCD'
-  sending_facility: '^CCHIT^HCD'
-  receiving_application: Receiving App
-  receiving_facility: Receiving Facility
+ted_smith_header:
+  patient: ted_smith
+  sending_application: 'Laika^Test^L'
+  sending_facility: 'CCHIT_Test_Lab_Alpha^Test^L'
+  receiving_application: 'Laika^Test^L'
+  receiving_facility: 'Not A Real Clinic Alpha^L'
   message_date: 2007-12-25
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '334199'
@@ -55,10 +55,10 @@ theodore_smith_header:
 
 david_carter_header:
   patient: david_carter
-  sending_application: '^Laika_HL7_251^HCD'
-  sending_facility: '^CCHIT^HCD'
-  receiving_application: Receiving App
-  receiving_facility: Receiving Facility
+  sending_application: 'Laika^Test^L'
+  sending_facility: 'CCHIT_Test_Lab_Alpha^Test^L'
+  receiving_application: 'Laika^Test^L'
+  receiving_facility: 'Not A Real Clinic Alpha^L'
   message_date: 2006-04-12
   message_type: 'ORU^R01^ORU_R01'
   message_control_identifier: '357601'

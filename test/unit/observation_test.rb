@@ -11,9 +11,9 @@ class ObservationTest < ActiveSupport::TestCase
       obx_segment = @observation.to_obx
       assert(obx_segment)
       assert_equal('CE', obx_segment.value_type)
-      assert_equal('785-6^MCH^LN', obx_segment.observation_id)
-      assert_equal('32.6', obx_segment.observation_value)
-      assert_equal('pg', obx_segment.units)
+      assert_equal('2341-6^GLUCOSE^LN', obx_segment.observation_id)
+      assert_equal('91', obx_segment.observation_value)
+      assert_equal('mg/dL', obx_segment.units)
     end
     
     should 'validate a hl7 v2.5.1 OBX segment' do
